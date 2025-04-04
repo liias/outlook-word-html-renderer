@@ -793,65 +793,6 @@
     </xsd:complexType>
   </xsd:element>
 
-  <xsd:element name="frame" vs:implicitclosure="true" fp:default="onblur">
-    <xsd:complexType>
-      <xsd:attribute name="allowtransparency" type="xsd:boolean" default="false" />
-      <xsd:attribute name="application" default="no" vs:nonbrowseable="true">
-        <xsd:simpleType>
-          <xsd:restriction base="xsd:NMTOKEN">
-            <xsd:enumeration value="yes" />
-            <xsd:enumeration value="no" />
-          </xsd:restriction>
-        </xsd:simpleType>
-      </xsd:attribute>
-      <xsd:attribute name="bordercolor" type="colorType" vs:builder="color" />
-      <xsd:attribute name="frameborder" default="1">
-        <xsd:simpleType>
-          <xsd:restriction base="xsd:NMTOKEN">
-            <xsd:enumeration value="yes" />
-
-            <xsd:enumeration value="1" />
-
-          </xsd:restriction>
-        </xsd:simpleType>
-      </xsd:attribute>
-      <xsd:attribute name="height" />
-      <xsd:attribute name="longdesc" type="xsd:anyURI" />
-
-      <xsd:attribute name="name" />
-
-      <xsd:attribute name="src" type="xsd:anyURI" vs:preferredextensions=".asp;.aspx;.asmx;.ashx;.ascx;.htm;.html;.xml;.xsd;.shtm;.shtml;.php;.jsp" />
-      <xsd:attribute name="width" />
-
-      <xsd:attributeGroup ref="dataAttributeGroup" />
-
-    </xsd:complexType>
-  </xsd:element>
-  <xsd:element name="frameset" fp:default="onload">
-    <xsd:complexType>
-      <xsd:choice>
-        <xsd:element ref="frame" />
-        <xsd:element ref="frameset" />
-        <xsd:element ref="noframes" />
-      </xsd:choice>
-      <xsd:attribute name="border" type="xsd:integer" />
-      <xsd:attribute name="bordercolor" type="colorType" vs:builder="color" />
-      <xsd:attribute name="cols" />
-      <xsd:attribute name="frameborder" default="1">
-        <xsd:simpleType>
-          <xsd:restriction base="xsd:NMTOKEN">
-            <xsd:enumeration value="yes" />
-
-            <xsd:enumeration value="1" />
-
-          </xsd:restriction>
-        </xsd:simpleType>
-      </xsd:attribute>
-      <xsd:attribute name="framespacing" type="xsd:integer" />
-      <xsd:attribute name="rows" />
-
-    </xsd:complexType>
-  </xsd:element>
   <xsd:element name="head">
     <xsd:complexType>
       <xsd:choice>
@@ -887,7 +828,6 @@
     <xsd:complexType>
       <xsd:choice>
         <xsd:element ref="body" minOccurs="1" maxOccurs="1" />
-        <xsd:element ref="frameset" minOccurs="0" maxOccurs="1" />
         <xsd:element ref="head" minOccurs="0" maxOccurs="1" />
 
       </xsd:choice>
