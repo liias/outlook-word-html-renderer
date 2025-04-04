@@ -1086,7 +1086,7 @@
   <xsd:element name="meta">
     <xsd:complexType>
       <xsd:attribute name="content" />
-      <xsd:attribute name="HTTP-Equiv" />
+      <xsd:attribute name="http-equiv" />
       <xsd:attribute name="name" />
       <xsd:attribute name="scheme" />
 
