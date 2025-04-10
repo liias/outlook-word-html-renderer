@@ -1,0 +1,1063 @@
+<head>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizelegibility;
+            font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-weight: 400;
+        }
+
+        table {
+            width: 400px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            table-layout: auto;
+            font-size: .875rem;
+        }
+
+        table th, table td {
+            word-wrap: break-word;
+            border-block-start: 1px solid #d1d1d1;
+            vertical-align: top;
+            padding: 0.5rem;
+            line-height: 1.5;
+            display: table-cell;
+            padding: 0;
+        }
+
+        tr.even {
+            background: lightgray;
+        }
+
+        p {
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+<h1>Word 2007 HTML Specification</h1>
+
+<div>
+
+    <p>
+        Units:
+ cm
+ em
+ ex
+ pc
+ %
+ pt
+ px
+    </p>
+
+
+<pre>
+ body CORE
+ span CORE
+  div COREEXTENDED
+    p COREEXTENDED
+table FULL
+a, center, font, img FULL (actually width and height don't work unless adding at least 1px border)
+
+---
+CORE (body and span):
+color
+font
+font-family
+font-style
+font-variant
+font-size
+font-weight
+text-decoration
+background (only color)
+background-color
+text-align
+vertical-align
+letter-spacing
+line-height
+white-space
+display (only none is supported)
+border
+border-color
+border-style
+border-width
+src
+size
+page-break-before
+page-break-after
+page-break-inside
+list-style
+list-style-type
+unicode-bidi
+(table) border-collapse
+
+---
+COREEXTENDED (div and p):
+all of CORE and:
+text-indent
+margin
+margin-left
+margin-right
+margin-top
+margin-bottom
+
+FULL (a, center, font, img, ...)
+all of COREEXTENDED and:
+width
+height
+padding
+padding-left
+padding-right
+padding-top
+padding-bottom
+border-left
+border-right
+border-top
+border-bottom
+border-left-color
+border-left-width
+border-left-style
+border-right-color
+border-right-width
+border-right-style
+border-top-color
+border-top-width
+border-top-style
+border-bottom-color
+border-bottom-width
+border-bottom-style
+
+----
+
+NOT SUPPORTED:
+display (except none)
+background-attachment
+background-image
+background-position
+background-repeat
+clear
+float
+list-style-image
+list-style-position
+text-transform
+word-spacing
+border-spacing
+bottom
+caption-side
+clear
+clip
+content
+counter-increment
+counter-reset
+cue-before, cue-after, cue
+cursor
+elevation
+empty-cells
+font-size-adjust
+font-stretch
+left
+line-break
+marker-offset
+max-height
+max-width
+min-height
+min-width
+orphans
+outline
+outline-color
+outline-style
+outline-width
+overflow
+overflow-x
+overflow-y
+pause-before, pause-after, pause
+position
+quotes
+right
+table-layout
+text-shadow
+top
+unicode-bidi
+visibility
+z-index
+</pre>
+
+</div>
+
+
+<table>
+    <thead>
+    <tr class="header">
+        <th><p id="modal-heading"><strong>HTML Element</strong></p></th>
+        <th><p><strong>Attribute</strong></p></th>
+        <th><p><strong>CSS Support Level</strong></p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+        <td><p>a</p></td>
+        <td><p>class</p>
+            <p>href</p>
+            <p>hreflang</p>
+            <p>id</p>
+            <p>name</p>
+            <p>rel</p>
+            <p>rev</p>
+            <p>target</p>
+            <p>shape</p>
+            <p>style</p>
+            <p>type</p>
+            <p>urn</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>abbr</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>acronym</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>address</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>disabled</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>area</p></td>
+        <td><p>class</p>
+            <p>coords</p>
+            <p>href</p>
+            <p>id</p>
+            <p>nohref</p>
+            <p>shape</p>
+            <p>style</p>
+            <p>target</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>b</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>base</p></td>
+        <td><p>class</p>
+            <p>href</p>
+            <p>id</p>
+            <p>target</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>basefont</p></td>
+        <td><p>class</p>
+            <p>color</p>
+            <p>face</p>
+            <p>id</p>
+            <p>size</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>big</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>blockquote</p></td>
+        <td><p>cite</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>body</p></td>
+        <td><p>alink</p>
+            <p>background</p>
+            <p>bgcolor</p>
+            <p>bgproperties</p>
+            <p>class</p>
+            <p>id</p>
+            <p>link</p>
+            <p>nowrap</p>
+            <p>text</p>
+            <p>vlink</p></td>
+        <td><p>CORE</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>br</p></td>
+        <td><p>class</p>
+            <p>clear</p>
+            <p>id</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>caption</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p>
+            <p>valign</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>center</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>cite</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>code</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>col</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>span</p>
+            <p>style</p>
+            <p>valign</p>
+            <p>width</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>colgroup</p></td>
+        <td><p>align</p>
+            <p>bgcolor</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>span</p>
+            <p>style</p>
+            <p>valign</p>
+            <p>width</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>comment</p></td>
+        <td><p>class</p>
+            <p>data</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>dd</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>del</p></td>
+        <td><p>cite</p>
+            <p>class</p>
+            <p>datetime</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>dfn</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>dir</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p>
+            <p>type</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>div</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>nowrap</p>
+            <p>style</p></td>
+        <td><p>COREEXTENDED</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>dl</p></td>
+        <td><p>class</p>
+            <p>compact</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>dt</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p>
+            <p>nowrap</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>em</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>fieldset</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>font</p></td>
+        <td><p>class</p>
+            <p>color</p>
+            <p>dir</p>
+            <p>face</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>size</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>frame</p></td>
+        <td><p>allowtransparency</p>
+            <p>application</p>
+            <p>bordercolor</p>
+            <p>class</p>
+            <p>frameborder</p>
+            <p>height</p>
+            <p>id</p>
+            <p>longdesc</p>
+            <p>name</p>
+            <p>src</p>
+            <p>width</p></td>
+        <td><p>None</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>frameset</p></td>
+        <td><p>border</p>
+            <p>bordercolor</p>
+            <p>class</p>
+            <p>cols</p>
+            <p>frameborder</p>
+            <p>framespacing</p>
+            <p>id</p></td>
+        <td><p>None</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>h1</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>h2</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>h3</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>h4</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>h5</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>h6</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>head</p></td>
+        <td><p>dir</p>
+            <p>lang</p></td>
+        <td><p>None</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>hr</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>color</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>size</p>
+            <p>style</p>
+            <p>width</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>html</p></td>
+        <td><p>dir</p>
+            <p>lang</p></td>
+        <td><p>None</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>i</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>img</p></td>
+        <td><p>align</p>
+            <p>alt</p>
+            <p>border</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>dynsrc</p>
+            <p>height</p>
+            <p>hspace</p>
+            <p>id</p>
+            <p>ismap</p>
+            <p>lang</p>
+            <p>longdesc</p>
+            <p>lowsrc</p>
+            <p>name</p>
+            <p>src</p>
+            <p>style</p>
+            <p>usemap</p>
+            <p>vspace</p>
+            <p>width</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>ins</p></td>
+        <td><p>cite</p>
+            <p>class</p>
+            <p>datetime</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>kbd</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>label</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>for</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>legend</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>li</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p>
+            <p>type</p>
+            <p>value</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>link</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>href</p>
+            <p>hreflang</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>name</p>
+            <p>rel</p>
+            <p>rev</p>
+            <p>style</p>
+            <p>type</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>listing</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>map</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>name</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>meta</p></td>
+        <td><p>content</p>
+            <p>http-equiv</p>
+            <p>id</p>
+            <p>name</p>
+            <p>scheme</p></td>
+        <td><p>None</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>nobr</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>height</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>ol</p></td>
+        <td><p>class</p>
+            <p>compact</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p>
+            <p>type</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>p</p></td>
+        <td><p>align</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>COREEXTENDED</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>pre</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>s</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>samp</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>small</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>span</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>disabled</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>CORE</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>strike</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>strong</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>style</p></td>
+        <td><p>dir</p>
+            <p>lang</p>
+            <p>type</p></td>
+        <td><p>None</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>sub</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>sup</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>table</p></td>
+        <td><p>align</p>
+            <p>bgcolor</p>
+            <p>border</p>
+            <p>bordercolor</p>
+            <p>cellpadding</p>
+            <p>cellspacing</p>
+            <p>class</p>
+            <p>cols</p>
+            <p>dir</p>
+            <p>frame</p>
+            <p>height</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>rules</p>
+            <p>style</p>
+            <p>summary</p>
+            <p>width</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>tbody</p></td>
+        <td><p>align</p>
+            <p>bgcolor</p>
+            <p>ch</p>
+            <p>choff</p>
+            <p>class</p>
+            <p>cols</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p>
+            <p>valign</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>td</p></td>
+        <td><p>abbr</p>
+            <p>align</p>
+            <p>axis</p>
+            <p>bgcolor</p>
+            <p>bordercolor</p>
+            <p>ch</p>
+            <p>choff</p>
+            <p>class</p>
+            <p>colspan</p>
+            <p>datafld</p>
+            <p>dir</p>
+            <p>headers</p>
+            <p>height</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>nowrap</p>
+            <p>scope</p>
+            <p>style</p>
+            <p>width</p>
+            <p>valign</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>textarea</p></td>
+        <td><p>class</p>
+            <p>cols</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>name</p>
+            <p>readonly</p>
+            <p>rows</p>
+            <p>style</p>
+            <p>wrap</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>tfoot</p></td>
+        <td><p>bgcolor</p>
+            <p>ch</p>
+            <p>choff</p>
+            <p>class</p>
+            <p>cols</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p>
+            <p>valign</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>th</p></td>
+        <td><p>abbr</p>
+            <p>axis</p>
+            <p>bgcolor</p>
+            <p>bordercolor</p>
+            <p>ch</p>
+            <p>choff</p>
+            <p>class</p>
+            <p>colspan</p>
+            <p>datafld</p>
+            <p>dir</p>
+            <p>headers</p>
+            <p>height</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>nowrap</p>
+            <p>scope</p>
+            <p>style</p>
+            <p>width</p>
+            <p>valign</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>thead</p></td>
+        <td><p>bgcolor</p>
+            <p>ch</p>
+            <p>choff</p>
+            <p>class</p>
+            <p>cols</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p>
+            <p>valign</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>tfoot</p></td>
+        <td><p>bgcolor</p>
+            <p>ch</p>
+            <p>choff</p>
+            <p>class</p>
+            <p>cols</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p>
+            <p>valign</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>title</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>tr</p></td>
+        <td><p>align</p>
+            <p>bgcolor</p>
+            <p>bordercolor</p>
+            <p>class</p>
+            <p>dir</p>
+            <p>height</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p>
+            <p>width</p>
+            <p>valign</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>tt</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>u</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>ul</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p>
+            <p>type</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="even">
+        <td><p>var</p></td>
+        <td><p>class</p>
+            <p>dir</p>
+            <p>id</p>
+            <p>lang</p>
+            <p>style</p></td>
+        <td><p>FULL</p></td>
+    </tr>
+    <tr class="odd">
+        <td><p>xml</p></td>
+        <td><p>class</p>
+            <p>id</p>
+            <p>src</p></td>
+        <td><p>None</p></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
