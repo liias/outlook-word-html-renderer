@@ -12,4 +12,4 @@ I extracted the msi and added the Visual Studio schemas to this repository for a
 Microsoft® Office HTML and XML Reference
 - https://learn.microsoft.com/en-us/previous-versions/office/developer/office2000/aa155477(v=office.10)
 
-This article references `ofhtml9.exe`. Contents of that file is on `ofhtml9` directory.
+This article references `ofhtml9.exe`. Contents of that file is in `ofhtml9` directory.
